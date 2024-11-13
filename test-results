@@ -1,0 +1,29 @@
+## 1. Sistemsko Testiranje
+- **Unos: 5+3**
+  - Očekivani rezultat: 8
+  - Dobijeni rezultat: 8
+  - Status: PASSED
+
+- **Unos: 10-5*2**
+  - Očekivani rezultat: 0 (poštovanje prioriteta operacija)
+  - Dobijeni rezultat: 0
+  - Status: PASSED
+
+- **Unos: 1/0**
+  - Očekivani rezultat: Greška ili specijalna vrednost
+  - Dobijeni rezultat: Infinity
+  - Status: PASSED (ali treba dokumentovati ponašanje)
+
+- **Unos: 5+abc**
+  - Očekivani rezultat: Greška
+  - Dobijeni rezultat: ERROR
+  - Status: PASSED
+
+## 2. Detektovane Greške i Propusti
+- **Deljenje sa nulom**: Program vraća "Infinity" umesto da prijavi grešku.
+- **Upotrebljivost**: Unos sa više simbola `++` ili `--` rezultira greškom koju korisnik ne može lako da razume.
+- **Specijalni slučajevi**: Program ne može da obradi `NaN` pravilno.
+
+## 3. Preporuke
+- Poboljšati rukovanje greškama i dodati korisnički razumljive poruke.
+- Dodati podršku za obuhvatanje nevažećih unosa.
