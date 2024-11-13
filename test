@@ -1,0 +1,29 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CalculatorTest {
+
+    @Test
+    public void testCalculate() {
+        // Priprema ulaznih podataka
+        List<Float> numbers = new ArrayList<>();
+        numbers.add(5.0f);
+        numbers.add(3.0f);
+
+        List<String> operations = new ArrayList<>();
+        operations.add("+");
+
+        // Očekivani rezultat
+        float expected = 8.0f;
+
+        // Poziv metode Calculate
+        Calculator.Calculate(numbers, operations);
+
+        // Provera rezultata
+        assertEquals(expected, Calculator.finalResult, 0.001);
+    }
+
+   
+}
